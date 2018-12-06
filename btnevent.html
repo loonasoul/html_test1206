@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      *{margin: 0; padding: 0;}
+      section{height: 400px; background-color: pink; text-align: center;}
+      article{width: 500px; height: 250px; display: inline-block; background-color: black;
+              margin: 30px; position: relative;}
+      article img{top: 0px; left: 0; display: none; width: 500px; height: 250px; position: absolute}
+      img{width: 60px; height: 60px; position: relative;}
+    </style>
+  </head>
+  <body>
+    <section>
+      <article class="">
+        <img id="img01" src="imge.jpg" alt="">
+        <img id="img02" src="imge2.jpg" alt="">
+        <img id="img03" src="imge3.jpg" alt="">
+      </article>
+      <br>
+      <div class="img">
+      <img id="B_bt" src="back.png" alt="">
+      <img id="N_bt" src="next.png" alt="">
+    </div>
+    </section>
+    <script>
+
+      var B_bt = document.getElementById('B_bt');
+      var N_bt = document.getElementById('N_bt');
+      var img01 = document.getElementById('img01');
+      var img02 = document.getElementById('img02');
+      var img03 = document.getElementById('img03');
+      var count = 1;
+      imgview();
+
+      N_bt.addEventListener('click', function() {console.log(count);
+                            if(count<3) {count++; imgview();}})
+
+      B_bt.addEventListener('click', function() {console.log(count);
+                            if(count>1) {count--; imgview();}})
+
+
+
+  function imgview() {img01.style.display = 'none';
+                      img02.style.display = 'none';
+                      img03.style.display = 'none';
+                      if(count==1){
+                        img01.style.display = 'block'}
+                      else if (count==2) {img02.style.display = 'block';}
+                      else if (count==3) {img03.style.display = 'block';}
+}
+
+
+
+
+
+
+    </script>
+  </body>
+</html>
