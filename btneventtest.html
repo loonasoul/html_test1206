@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>버튼 누르기 연습</title>
+  </head>
+  <style>
+    *{margin: 0; padding: 0;}
+  .div1{height: 150px; background-color: mistyrose;}
+  .div1 #bts{width: 50px; height: 100px; background-color: black;
+              margin:25px 50px 0 25px; float: left;}
+  .div1 #bts b{color: white; margin-top: 20px; display: block;}
+  #bt_test1{width: 50px; height: 100px; background-color: white;
+            margin: 25px 50px 0 25px; float: left;}
+  #bt_test1 b{color: green; margin-top: 20px; display: block;}
+  #bt_test2{width: 50px; height: 100px; background-color: orange;
+            margin: 25px 50px 0 25px; float: left;}
+  #bt_test2 b{color: gray; margin-top: 20px; display: block;}
+  #cc{margin-top: 50px; float: left; color: gold;}
+  .div2{height: 500px; width: 100%; background-color: lightpink; float: left;}
+  #inp{color: white; background-color: lightpink; font-size: 40px;
+        border-color: none; margin: 200px 200px 0 280px;}
+  </style>
+  <body>
+    <div class="div1">
+      <div id="bts">
+        <b id="bt1">버튼1</b>
+        <b id="bt2">버튼2</b>
+      </div>
+      <div class="textbox">
+
+      </div>
+    </div>
+    <div class="div2">
+
+      <input type="button" id="inp" onclick="location.href='ab.html'" value="다음 페이지로">
+
+    </div>
+    <script>
+
+
+      var div1_bt1 = document.getElementById('bt1');
+      var div1_bt2 = document.getElementById('bt2');
+      var bts = document.getElementById('bts');
+
+      var inp1 = document.getElementById('inp1');
+
+      div1_bt1.addEventListener("click", function() {
+        bts.id="bt_test1";
+      });
+
+      div1_bt2.addEventListener("click", function() {
+        bts.id="bt_test2";
+      });
+
+      div_bt1.addEventListener("click", function() {
+        textbox.innerHTML="<h1 id='cc'>클릭하셨나요</h>"
+      });
+
+
+
+    </script>
+  </body>
+</html>
